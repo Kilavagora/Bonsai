@@ -1,0 +1,10 @@
+@import "/dist/bonsai.css";
+
+#garden {
+  display: flex;
+}
+
+#plain-tree-test * {
+  pointer-events: none;
+}
+

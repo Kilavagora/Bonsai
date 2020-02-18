@@ -1,0 +1,73 @@
+.tree {
+  list-style-type: none;
+  padding-left: 1.5em;
+  margin-left: -14px;
+  .tree {
+    border-left: 2px solid gray;
+  }
+}
+
+.tree-node {
+  padding-left: 5px;
+  box-sizing: border-box;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border: 2px solid transparent;
+  position: relative;
+  &[draggable="true"] {
+    cursor: move;
+  }
+  &.over {
+    border: 2px dashed grey;
+  }
+  &.over-top {
+    border-top: 2px dashed gray;
+  }
+  &.over-bottom {
+    border-bottom: 2px dashed gray;
+  }
+  .dragged {
+    pointer-events: none;
+    opacity: 0.4;
+  }
+  &.over::after {
+    display: block;
+    content: "┗";
+    position: absolute;
+    padding-left: 2em;
+    font-size: smaller;
+    color: grey;
+  }
+  &.over-bottom::after,
+  &.over-top::before {
+    content: "━";
+    display: block;
+    color: gray;
+    position: absolute;
+    margin-left: -2em;
+    font-size: smaller;
+  }
+  &.over::after {
+    display: block;
+    content: "┗";
+    position: absolute;
+    padding-left: 2em;
+    font-size: smaller;
+    color: grey;
+  }
+  &.over-bottom::after {
+    bottom: -10px;
+  }
+  &.over-top::before {
+    top: -10px;
+  }
+  &.parent.tree-node {
+    list-style-type: "\2bc6";
+  }
+  &.parent.closed {
+    list-style-type: "\2bc8";
+  }
+  &.closed > ol {
+    display: none;
+  }
+}

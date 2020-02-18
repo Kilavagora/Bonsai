@@ -1,0 +1,28 @@
+{
+  "name": "bonsai",
+  "version": "0.0.1",
+  "description": "A simple drag'n'drop tree library",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack -p",
+    "dev": "webpack-dev-server --mode=development",
+    "start": "webpack-dev-server --mode=production"
+  },
+  "repository": "https://github.com/Kilavagora/Bonsai",
+  "author": "Kilavagora",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.2",
+    "extract-loader": "^4.0.3",
+    "file-loader": "^5.0.2",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
